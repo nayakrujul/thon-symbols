@@ -1,4 +1,5 @@
 from math import *
+from string import *
 from thon_symbols.List import List
 
 def run(code, _stack=()):
@@ -179,10 +180,25 @@ def run(code, _stack=()):
                 stack[0] += code[index]
             else:
                 stack.push(code[index])
+        elif char == 'å':
+            stack.push(ascii_lowercase)
+        elif char == 'Å':
+            stack.push(ascii_uppercase)
+        elif char == 'Ḷ':
+            a, b = stack.first(str, 2)
+            stack.push(b.ljust(stack.first(int), 2))
+        elif char == 'Ṛ':
+            a, b = stack.first(str, 2)
+            stack.push(b.rjust(stack.first(int), 2))
         elif char == 'ṕ':
             print(stack[0], end='')
         elif char == 'Ṕ':
             print(stack[0])
+        else:
+            if isinstance(stack[0], str):
+                stack[0] += code[index]
+            else:
+                stack.push(code[index])
         index += 1
     return stack
 
@@ -190,7 +206,8 @@ def from_cmdline():
     code = input()
     out = run(code)[0]
     print(out)
-    print(f'\nCode Golf SE Submission:\n')
+    print('\n- - - - - - - - - -\n')
+    print('Code Golf SE Submission:\n')
     print(f'# [Thon (Symbols)][1], {len(code)} [bytes][2]\n')
     print(f'```\n{code}\n```\n')
     print('  [1]: https://github.com/nayakrujul/thon-symbols')
