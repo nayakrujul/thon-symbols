@@ -10,7 +10,7 @@ setup(
   author = 'Rujul Nayak',
   author_email = 'rujulnayak@outlook.com',
   url = 'https://github.com/nayakrujul/thon-symbols',
-  download_url = 'https://github.com/nayakrujul/thon-symbols/archive/refs/tags/v_20.tar.gz',
+  download_url = 'https://github.com/nayakrujul/thon-symbols/archive/refs/tags/v14.tar.gz',
   keywords = ['golfing', 'code-golf', 'language'],
   install_requires=[
       ],
