@@ -185,10 +185,10 @@ def run(code, _stack=()):
         elif char == 'Å':
             stack.push(ascii_uppercase)
         elif char == 'Ḷ':
-            a, b = stack.first(str, 2)
+            a, b = stack.first(str, k=2)
             stack.push(b.ljust(stack.first(int), 2))
         elif char == 'Ṛ':
-            a, b = stack.first(str, 2)
+            a, b = stack.first(str, k=2)
             stack.push(b.rjust(stack.first(int), 2))
         elif char == 'ṕ':
             print(stack[0], end='')
