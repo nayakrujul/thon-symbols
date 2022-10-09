@@ -100,37 +100,37 @@ def run(code, _stack=()):
         elif char == '`':
             stack.push(stack.first((list, str))[stack.first(int)])
         elif char == '+':
-            a, b = stack.first((int, float), n=2)
+            b, a = stack.first((int, float), n=2)
             stack.push(a + b)
         elif char == '-':
-            a, b = stack.first((int, float), n=2)
+            b, a = stack.first((int, float), n=2)
             stack.push(a - b)
         elif char == '*':
-            a, b = stack.first((int, float), n=2)
+            b, a = stack.first((int, float), n=2)
             stack.push(a * b)
         elif char == '/':
-            a, b = stack.first((int, float), n=2)
+            b, a = stack.first((int, float), n=2)
             stack.push(a / b)
         elif char == '^':
-            a, b = stack.first((int, float), k=2)
+            b, a = stack.first((int, float), k=2)
             stack.push(a ** b)
         elif char == '%':
-            a, b = stack.first((int, float), n=2)
+            b, a = stack.first((int, float), n=2)
             stack.push(a % b)
         elif char == '£':
-            a, b = stack.first((int, float), n=2)
+            b, a = stack.first((int, float), n=2)
             stack.push(list(divmod(a, b)))
         elif char == '>':
-            a, b = stack.first((int, float), n=2)
+            b, a = stack.first((int, float), n=2)
             stack.push(a > b)
         elif char == '≥':
-            a, b = stack.first((int, float), n=2)
+            b, a = stack.first((int, float), n=2)
             stack.push(a >= b)
         elif char == '<':
-            a, b = stack.first((int, float), n=2)
+            b, a = stack.first((int, float), n=2)
             stack.push(a < b)
         elif char == '≤':
-            a, b = stack.first((int, float), n=2)
+            b, a = stack.first((int, float), n=2)
             stack.push(a <= b)
         elif char == '=':
             stack.push(stack[0] == stack[1])
