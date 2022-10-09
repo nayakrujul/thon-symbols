@@ -56,7 +56,7 @@ def run(code, _stack=()):
         elif char == ';':
             stack.push(stack.first(list) + [stack.first(list, False)])
         elif char == '&':
-            a, b = stack.first(list, k=2)
+            a, b = stack.first(list, n=2)
             stack.push(a + b)
         elif char == '←':
             a = stack.first((list, str))
@@ -67,7 +67,7 @@ def run(code, _stack=()):
         elif char == 'đ':
             stack.push(list(set(stack.first(list))))
         elif char == '[':
-            a, b = stack.first(str, k=2)
+            a, b = stack.first(str, n=2)
             stack.push(b.split(a))
         elif char == ']':
             stack.push(stack.first(str).join(stack.first(list)))
@@ -100,37 +100,37 @@ def run(code, _stack=()):
         elif char == '`':
             stack.push(stack.first((list, str))[stack.first(int)])
         elif char == '+':
-            a, b = stack.first((int, float), k=2)
+            a, b = stack.first((int, float), n=2)
             stack.push(a + b)
         elif char == '-':
-            a, b = stack.first((int, float), k=2)
+            a, b = stack.first((int, float), n=2)
             stack.push(a - b)
         elif char == '*':
-            a, b = stack.first((int, float), k=2)
+            a, b = stack.first((int, float), n=2)
             stack.push(a * b)
         elif char == '/':
-            a, b = stack.first((int, float), k=2)
+            a, b = stack.first((int, float), n=2)
             stack.push(a / b)
         elif char == '^':
             a, b = stack.first((int, float), k=2)
             stack.push(a ** b)
         elif char == '%':
-            a, b = stack.first((int, float), k=2)
+            a, b = stack.first((int, float), n=2)
             stack.push(a % b)
         elif char == '£':
-            a, b = stack.first((int, float), k=2)
+            a, b = stack.first((int, float), n=2)
             stack.push(list(divmod(a, b)))
         elif char == '>':
-            a, b = stack.first((int, float), k=2)
+            a, b = stack.first((int, float), n=2)
             stack.push(a > b)
         elif char == '≥':
-            a, b = stack.first((int, float), k=2)
+            a, b = stack.first((int, float), n=2)
             stack.push(a >= b)
         elif char == '<':
-            a, b = stack.first((int, float), k=2)
+            a, b = stack.first((int, float), n=2)
             stack.push(a < b)
         elif char == '≤':
-            a, b = stack.first((int, float), k=2)
+            a, b = stack.first((int, float), n=2)
             stack.push(a <= b)
         elif char == '=':
             stack.push(stack[0] == stack[1])
@@ -186,10 +186,10 @@ def run(code, _stack=()):
             stack.push(ascii_uppercase)
         elif char == 'Ḷ':
             a, b = stack.first(str, k=2)
-            stack.push(b.ljust(stack.first(int), 2))
+            stack.push(b.ljust(stack.first(int), a))
         elif char == 'Ṛ':
             a, b = stack.first(str, k=2)
-            stack.push(b.rjust(stack.first(int), 2))
+            stack.push(b.rjust(stack.first(int), a))
         elif char == 'ṕ':
             print(stack[0], end='')
         elif char == 'Ṕ':
