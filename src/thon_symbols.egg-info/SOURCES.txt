@@ -1,0 +1,10 @@
+setup.cfg
+setup.py
+thon_symbols/List.py
+thon_symbols/__init__.py
+thon_symbols/main.py
+thon_symbols.egg-info/PKG-INFO
+thon_symbols.egg-info/SOURCES.txt
+thon_symbols.egg-info/dependency_links.txt
+thon_symbols.egg-info/entry_points.txt
+thon_symbols.egg-info/top_level.txt

@@ -1,0 +1,3 @@
+[console_scripts]
+thonsymbols = thon_symbols.main:from_cmdline
+
