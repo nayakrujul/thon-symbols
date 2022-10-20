@@ -101,36 +101,56 @@ def run(code, _stack=()):
             stack.push(stack.first((list, str))[stack.first(int)])
         elif char == '+':
             b, a = stack.first((int, float), n=2)
+            stack.remove(a)
+            stack.remove(b)
             stack.push(a + b)
         elif char == '-':
             b, a = stack.first((int, float), n=2)
+            stack.remove(a)
+            stack.remove(b)
             stack.push(a - b)
         elif char == '*':
             b, a = stack.first((int, float), n=2)
+            stack.remove(a)
+            stack.remove(b)
             stack.push(a * b)
         elif char == '/':
             b, a = stack.first((int, float), n=2)
+            stack.remove(a)
+            stack.remove(b)
             stack.push(a / b)
         elif char == '^':
             b, a = stack.first((int, float), k=2)
+            stack.remove(a)
+            stack.remove(b)
             stack.push(a ** b)
         elif char == '%':
             b, a = stack.first((int, float), n=2)
             stack.push(a % b)
         elif char == '£':
             b, a = stack.first((int, float), n=2)
+            stack.remove(a)
+            stack.remove(b)
             stack.push(list(divmod(a, b)))
         elif char == '>':
             b, a = stack.first((int, float), n=2)
+            stack.remove(a)
+            stack.remove(b)
             stack.push(a > b)
         elif char == '≥':
             b, a = stack.first((int, float), n=2)
+            stack.remove(a)
+            stack.remove(b)
             stack.push(a >= b)
         elif char == '<':
             b, a = stack.first((int, float), n=2)
+            stack.remove(a)
+            stack.remove(b)
             stack.push(a < b)
         elif char == '≤':
             b, a = stack.first((int, float), n=2)
+            stack.remove(a)
+            stack.remove(b)
             stack.push(a <= b)
         elif char == '=':
             stack.push(stack[0] == stack[1])
@@ -190,6 +210,9 @@ def run(code, _stack=()):
         elif char == 'Ṛ':
             a, b = stack.first(str, n=2)
             stack.push(b.rjust(stack.first(int), a))
+        elif char == 'ị':
+            a, b = stack.first(str, n=2)
+            stack.push(a.index(b))
         elif char == 'ṕ':
             print(stack[0], end='')
         elif char == 'Ṕ':
