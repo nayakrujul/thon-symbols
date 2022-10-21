@@ -217,6 +217,21 @@ def run(code, _stack=()):
             print(stack[0], end='')
         elif char == 'Ṕ':
             print(stack[0])
+        elif char == '$':
+            string = ''
+            index += 1
+            try:
+                while code[index] != '$':
+                    string += code[index]
+                    index += 1
+            except:
+                pass
+            a = stack.first((list, str))
+            l = []
+            for i in a:
+                stack = run(string, [i] + stack)
+                l.append(stack[0])
+            stack.push(l)
         else:
             if isinstance(stack[0], str):
                 stack[0] += code[index]
@@ -226,8 +241,12 @@ def run(code, _stack=()):
     return stack
 
 def from_cmdline():
-    code = input()
+    code = input('Code: ')
+    flags = input('Flags:)
+    for f in flags:
+        code += {'s': 'ş', 'S': 'Ş', 'i': 'ï', 'I': 'Ï'}[f]
     out = run(code)[0]
+    print('\nOutput')
     print(out)
     print('\n- - - - - - - - - -\n')
     print('Code Golf SE Submission:\n')
