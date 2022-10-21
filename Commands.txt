@@ -1,0 +1,74 @@
+Here is a list of commands which you can use in Thon Symbols:
+
+Inputs:
+  ï = integer input
+  Ï = list of integers input
+  ş = string input
+  Ş = list of strings input
+  
+Lists:
+  Σ = sum of the list
+  ∏ = product of the list
+  ↑ = maximum value of the list
+  ↓ = minimum value of the list
+  ∧ = GCD of the list
+  ∨ = LCM of the list
+  ) = new empty list
+  ; = append to the list
+  & = concatenate two lists
+  ← = reverse the list or string
+  đ = deduplicate the list
+  ] = join the list by a string
+  ŕ = remove an item from the list
+  Ŕ = remove all occurences of an item
+  ŀ = get the characters of an item in a list
+  ⱡ = get the length of a list or string
+  ` = list or string indexing
+  
+Strings:
+  [ = split the string by another string
+  ṡ = convert to string
+  Ṡ = convert all items of a list to string
+  ← = reverse the list or string
+  ⱡ = get the length of a list or string
+  ` = list or string indexing
+  Ḷ = fill on the right
+  Ṛ = fill on the left
+  ị = index of a substring
+
+Numbers:
+  í = convert to integer
+  Í = convert all items of a list to integer
+  + = addition
+  - = subtraction
+  * = multiplication
+  / = division
+  ^ = exponentiation
+  % = modulo
+  £ = divmod
+
+Comparisons:
+  > = greater than
+  ≥ = greater than or equal to
+  < = less than
+  ≤ = less than or equal to
+  = = equals
+  ≠ = not equal to
+  & = and
+  | = or
+  @ = xor
+  ~ = not
+  ? = if
+  : = else
+  ; = endif
+
+Loops:
+  { = for
+  } = endfor
+  $ = list comprehension
+  
+Others:
+  å = lowercase alphabet
+  Å = uppercase alphabet
+  ṕ = print (no newline)
+  Ṕ = print
