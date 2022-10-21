@@ -242,7 +242,7 @@ def run(code, _stack=()):
 
 def from_cmdline():
     code = input('Code: ')
-    flags = input('Flags:)
+    flags = input('Flags: ')
     for f in flags:
         code += {'s': 'ş', 'S': 'Ş', 'i': 'ï', 'I': 'Ï'}[f]
     out = run(code)[0]
