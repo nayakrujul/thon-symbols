@@ -1,4 +1,7 @@
 # thon-symbols
-A better version of Thon
+A better version of [Thon](https://github.com/nayakrujul/thon)
 
-Tutorial coming soon...
+Install with `pip install thon-symbols`
+
+* [Commands](https://github.com/nayakrujul/thon-symbols/blob/main/Commands.txt)
+* [Codepage](https://github.com/nayakrujul/thon-symbols/blob/main/Codepage.md)
