@@ -4,7 +4,7 @@ long_description = 'A very concise language - read the docs at https://www.githu
 
 setup(
   name = 'thon-symbols',
-  version = '1.12',
+  version = '1.13',
   license='Apache',
   description = 'A very concise language',
   author = 'Rujul Nayak',
