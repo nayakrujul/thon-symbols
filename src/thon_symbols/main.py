@@ -244,7 +244,7 @@ def from_cmdline():
     code = input('Code: ')
     flags = input('Flags: ')
     for f in flags:
-        code = {'s': 'ş', 'S': 'Ş', 'i': 'ï', 'I': 'Ï'}[f] + code
+        code = {'s': 'ş', 'S': 'Ş', 'i': 'ï', 'I': 'Ï'}.get(f, "") + code
     out = run(code)[0]
     print('\nOutput')
     print(out)
