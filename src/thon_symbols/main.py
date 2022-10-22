@@ -18,7 +18,7 @@ def run(code, _stack=()):
                 pass
             index -= 1
             while string[0] == '0':
-                stack.push(string[0])
+                stack.push(0)
                 try:
                     string = string[1:]
                 except:
