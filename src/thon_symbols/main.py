@@ -241,8 +241,9 @@ def run(code, _stack=()):
     return stack
 
 def from_cmdline():
-    code = input('Code: ')
+    inp = input('Code: ')
     flags = input('Flags: ')
+    code = inp
     for f in flags:
         code = {'s': 'ş', 'S': 'Ş', 'i': 'ï', 'I': 'Ï'}.get(f, "") + code
     out = run(code)[0]
@@ -250,7 +251,7 @@ def from_cmdline():
     print(out)
     print('\n- - - - - - - - - -\n')
     print('Code Golf SE Submission:\n')
-    print(f'# [Thon (Symbols)][1], {len(code)} [bytes][2]\n')
-    print(f'```\n{code}\n```\n')
+    print(f'# [Thon (Symbols)][1] `{flags}`, {len(inp)} [bytes][2]\n')
+    print(f'```\n{inp}\n```\n')
     print('  [1]: https://github.com/nayakrujul/thon-symbols')
     print('  [2]: https://github.com/nayakrujul/thon-symbols/blob/main/Codepage.md')
