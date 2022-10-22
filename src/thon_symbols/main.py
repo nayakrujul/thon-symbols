@@ -17,6 +17,12 @@ def run(code, _stack=()):
             except:
                 pass
             index -= 1
+            while string[0] == 0:
+                stack.push(string[0])
+                try:
+                    string = string[1:]
+                except:
+                    break
             stack.push(eval(string))
         elif char == '"':
             string = char
