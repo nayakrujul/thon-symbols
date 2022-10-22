@@ -24,6 +24,7 @@ Lists:
   ŀ = get the characters of an item in a list
   ⱡ = get the length of a list or string
   ` = list or string indexing
+  Ř = range(len(list or string))
   
 Strings:
   [ = split the string by another string
@@ -46,6 +47,7 @@ Numbers:
   ^ = exponentiation
   % = modulo
   £ = divmod
+  ř = range(0, number)
 
 Comparisons:
   > = greater than
