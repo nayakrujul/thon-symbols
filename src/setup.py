@@ -4,13 +4,13 @@ long_description = 'A very concise language - read the docs at https://www.githu
 
 setup(
   name = 'thon-symbols',
-  version = '1.11',
+  version = '1.12',
   license='Apache',
   description = 'A very concise language',
   author = 'Rujul Nayak',
   author_email = 'rujulnayak@outlook.com',
   url = 'https://github.com/nayakrujul/thon-symbols',
-  download_url = 'https://github.com/nayakrujul/thon-symbols/archive/refs/tags/v16.tar.gz',
+  download_url = 'https://github.com/nayakrujul/thon-symbols/archive/refs/tags/v112.tar.gz',
   keywords = ['golfing', 'code-golf', 'language'],
   install_requires=[
       ],
