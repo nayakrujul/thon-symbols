@@ -2,6 +2,15 @@ from math import *
 from string import *
 from thon_symbols.List import List
 
+def numberToBase(n, b):
+    if n == 0:
+        return [0]
+    digits = []
+    while n:
+        digits.append(int(n % b))
+        n //= b
+    return digits[::-1]
+
 def run(code, _stack=()):
     index = 0
     stack = List(_stack)
@@ -219,6 +228,18 @@ def run(code, _stack=()):
         elif char == 'ị':
             a, b = stack.first(str, n=2)
             stack.push(a.index(b))
+        elif char == 'Ḃ':
+            a, b = stack.first(int, n=2)
+            if b <= 64:
+                alphabet = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz+/'
+                stack.push(''.join(map(alphabet.__getitem__, numberToBase(a, b))))
+        elif char == 'ḃ':
+            a = stack.first(str)
+            b = stack.first(int)
+            stack.push(''.join(map(a.__getitem__, numberToBase(b, len(a)))))
+        elif char == 'Ḍ':
+            a, b = stack.first(int, n=2)
+            stack.push(int(a, b))
         elif char == 'ṕ':
             print(stack[0], end='')
         elif char == 'Ṕ':
